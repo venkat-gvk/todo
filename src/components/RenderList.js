@@ -1,9 +1,9 @@
 import React from "react";
 
 const RenderList = ({ list, setList }) => {
-  const deleteItem = id => {
+  const deleteItem = (id) => {
     localStorage.removeItem(id);
-    const updateList = list.filter(l => l.id !== id);
+    const updateList = list.filter((l) => l.id !== id);
     setList([...updateList]);
   };
 

@@ -15,7 +15,7 @@
 .tilesWrap li {
   display: inline-block;
   min-width: 100px;
-  max-width: 200px;
+  max-width: 500px;
   word-wrap: break-word;
   padding: 20px 20px 40px;
   position: relative;
@@ -27,10 +27,10 @@
 }
 
 .tilesWrap li p {
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 15px;
+  line-height: 14px;
   color: #ff9d1d;
-  margin-top: 5px;
+  margin-top: 3px;
 }
 .tilesWrap li button {
   padding: 10px 20px;
@@ -40,6 +40,8 @@
   position: relative;
   transition: all 0.3s ease-in-out;
   transform: translateY(-40px);
+  margin-right: 10px;
+  margin-bottom: 10px;
   opacity: 0;
   cursor: pointer;
   overflow: hidden;

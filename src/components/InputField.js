@@ -3,11 +3,11 @@ import { v4 } from "uuid";
 import "./InputField.css";
 
 const InputField = ({ input, setInput, list, setList }) => {
-  const getInput = e => {
+  const getInput = (e) => {
     setInput(e.target.value);
   };
 
-  const addToList = e => {
+  const addToList = (e) => {
     e.preventDefault();
     if (input && input.trim().length !== 0) {
       const mod = input.trim();
@@ -29,14 +29,14 @@ const InputField = ({ input, setInput, list, setList }) => {
     }
   };
 
-  const clearList = e => {
+  const clearList = (e) => {
     e.preventDefault();
     setList([]);
     localStorage.clear();
   };
 
   const disableButton = !input.trim() ? "disableButton" : "add";
-  const clearButton = list.length ? 'clear' : 'disableClear'
+  const clearButton = list.length ? "clear" : "disableClear";
 
   return (
     <div id="form-control">
@@ -55,12 +55,12 @@ const InputField = ({ input, setInput, list, setList }) => {
         </label>
 
         <div className="button_cont" align="center">
-          <button type="submit" className={disableButton} onClick={addToList}>
+          <button className={disableButton} onClick={addToList}>
             Add to List
           </button>
 
-          <button type="submit" className={clearButton} onClick={clearList}>
-            Clear
+          <button className={clearButton} onClick={clearList}>
+            Clear All
           </button>
         </div>
       </form>

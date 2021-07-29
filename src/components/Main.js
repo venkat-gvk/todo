@@ -7,12 +7,13 @@ const Main = () => {
   const [list, setList] = useState([]);
 
   useEffect(() => {
+    const todos = [];
     for (let i = 0; i < localStorage.length; i++) {
       const id = localStorage.key(i);
-      const obj = JSON.parse(localStorage.getItem(id));
-
-      setList(prevList => [obj, ...prevList]);
+      const todo = JSON.parse(localStorage.getItem(id));
+      todos.push(todo);
     }
+    setList(todos);
   }, []);
 
   return (

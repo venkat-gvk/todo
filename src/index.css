@@ -7,6 +7,6 @@ body {
   font-family: "Raleway", sans-serif;
 
   background: #a1ffce;
-  background: -webkit-linear-gradient(to right, #faffd1, #a1ffce);
-  background: linear-gradient(to right, #faffd1, #a1ffce);
+  background: -webkit-linear-gradient(to right, #f5f8db, #dbf5e7);
+  background: linear-gradient(to right, #fbfde6, #d8fdea);
 }
