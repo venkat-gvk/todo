@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import InputField from "./InputField";
 import RenderList from "./RenderList";
+import parseJson from "parse-json";
 
 const Main = () => {
   const [input, setInput] = useState("");
@@ -10,8 +11,11 @@ const Main = () => {
     const todos = [];
     for (let i = 0; i < localStorage.length; i++) {
       const id = localStorage.key(i);
-      const todo = JSON.parse(localStorage.getItem(id));
-      todos.push(todo);
+
+      if (id === "gvk_portfolio_theme_mode") continue;
+
+      const value = localStorage.getItem(id);
+      todos.push(JSON.parse(value));
     }
     setList(todos);
   }, []);

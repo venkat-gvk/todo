@@ -1,5 +1,5 @@
 import React from "react";
-import { v4 } from "uuid";
+import { v4 as uuidv4 } from "uuid";
 import "./InputField.css";
 
 const InputField = ({ input, setInput, list, setList }) => {
@@ -11,7 +11,7 @@ const InputField = ({ input, setInput, list, setList }) => {
     e.preventDefault();
     if (input && input.trim().length !== 0) {
       const mod = input.trim();
-      const id = v4();
+      const id = uuidv4();
 
       const date = new Date();
       const date_time =
